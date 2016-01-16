@@ -2,7 +2,6 @@ FROM scorpio147wbh/server-jre
 MAINTAINER Binghao Wang <scorpio147wbh@gmail.com>
 
 ENV SOLR_VERSION 5.3.1
-ENV SOLR_HOME /opt/solr
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl && \
     curl -O "http://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz.md5" && \
