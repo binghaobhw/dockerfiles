@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Binghao Wang <scorpio147wbh@gmail.com>
 
 ENV JAVA_HOME /opt/jdk1.8.0_66
+ENV PATH $JAVA_HOME/bin:$PATH
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl && \
     echo "073f2bdcb3b993f756772f4225bf05b6006516bf1d7d1672fb2ec2aff4e83736 server-jre-8u66-linux-x64.tar.gz" > SHA256SUM && \
