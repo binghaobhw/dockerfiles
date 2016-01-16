@@ -3,13 +3,13 @@ MAINTAINER Binghao Wang <scorpio147wbh@gmail.com>
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y -f \
-        wget \
+        curl \
         cmake \
         g++ && \
     mkdir -p /opt && \
-    wget -q -O - https://github.com/HIT-SCIR/ltp/archive/v3.3.0.tar.gz | tar -zx -C /opt && \
+    curl https://github.com/HIT-SCIR/ltp/archive/v3.3.0.tar.gz | tar -zx -C /opt && \
     cd /opt/ltp-3.3.0 && ./configure && make && \
-    apt-get purge -y wget cmake g++; \
+    apt-get purge -y curl cmake g++; \
     apt-get clean autoclean; \
     apt-get autoremove -y; \
     rm -rf /var/lib/{apt,dpkg,cache,log}; \
