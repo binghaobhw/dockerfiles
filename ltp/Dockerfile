@@ -9,10 +9,10 @@ RUN apt-get update && \
     mkdir -p /opt && \
     curl https://github.com/HIT-SCIR/ltp/archive/v3.3.0.tar.gz | tar -zx -C /opt && \
     cd /opt/ltp-3.3.0 && ./configure && make && \
-    apt-get purge -y curl cmake g++; \
-    apt-get clean autoclean; \
-    apt-get autoremove -y; \
-    rm -rf /var/lib/{apt,dpkg,cache,log}; \
+    apt-get purge -y curl cmake g++ && \
+    apt-get clean autoclean && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/{apt,dpkg,cache,log} && \
     rm -rf /tmp/*
 
 EXPOSE 12345
