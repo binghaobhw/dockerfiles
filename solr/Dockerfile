@@ -18,5 +18,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl && \
 
 EXPOSE 8983
 
-ENTRYPOINT ["/opt/solr/bin/solr"]
-CMD ["-f"]
+CMD ["/opt/solr/bin/solr", \
+    "-f"]

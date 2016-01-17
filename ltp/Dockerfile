@@ -17,8 +17,8 @@ RUN apt-get update && \
 
 EXPOSE 12345
 
-ENTRYPOINT ["/opt/ltp-3.3.0/bin/ltp_server"]
-CMD ["--log-level",  "2", \
+CMD ["/opt/ltp-3.3.0/bin/ltp_server", \
+    "--log-level",  "2", \
     "--threads", "1", \
     "--port", "12345", \
     "--last-stage", "all", \
