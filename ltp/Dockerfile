@@ -7,7 +7,7 @@ RUN apt-get update && \
         cmake \
         g++ && \
     mkdir -p /opt && \
-    curl https://github.com/HIT-SCIR/ltp/archive/v3.3.0.tar.gz | tar -zx -C /opt && \
+    curl -L https://github.com/HIT-SCIR/ltp/archive/v3.3.0.tar.gz | tar -zx -C /opt && \
     cd /opt/ltp-3.3.0 && ./configure && make && \
     apt-get purge -y curl cmake g++ && \
     apt-get clean autoclean && \
