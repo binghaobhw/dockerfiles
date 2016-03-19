@@ -1,6 +1,6 @@
 ### Description
 
-Docker image with Nginx + uWSGI + Flask + SQLite.
+Docker image with Nginx + uWSGI + Flask.
 
 Serve `/app/static/index.html` as `/`.
 
